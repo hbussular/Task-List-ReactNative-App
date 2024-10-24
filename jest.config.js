@@ -1,7 +1,12 @@
 module.exports = {
   preset: 'react-native',
 
-  setupFilesAfterEnv: ["@testing-library/jest-native/extend-expect"]
+  setupFilesAfterEnv: ["@testing-library/jest-native/extend-expect"],
+  testPathIgnorePatterns: [
+    "/node_modules",
+    "/android",
+    "/ios"
+  ]
 };
 
 // jest.mock('@react-native-async-storage/async-storage', () =>
