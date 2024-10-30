@@ -1,63 +1,68 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 
 export const AppStyles = StyleSheet.create({
   mainContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    width: '100%',
-    height: '100%',
+    flex: 1,
     backgroundColor: 'black',
   },
   viewContainer: {
-    paddingHorizontal: 20,
-    width: '100%',
-    height: '100%',
-    backgroundColor: '#fffff2',
+    paddingHorizontal: 30,
+    paddingVertical: 50,
+    flex: 1,
+    backgroundColor: 'black',
   }
-})
+});
 
 export const homeStyles = StyleSheet.create({
   homeView: {
     marginVertical: 20,
   },
   textInput: {
-    padding: 10,
+    padding: Platform.OS === 'ios' ? 15 : 12,
+    backgroundColor: '#29292e',
+    color: '#f1f1f1',
+    fontSize: 18,
+    borderRadius: 7,
     borderWidth: 1,
-    borderRadius: 10,
     marginVertical: 15,
-    backgroundColor: '#FFF8DC'
   },
   text: {
-    color: '#2F2F2F',
+    color: '#f1f1f1',
     fontWeight: 'bold',
-    textAlign: 'center'
+    fontSize: 24,
+    textAlign: 'center',
   },
   touchableOpacity: {
-    borderRadius: 10,
-    paddingVertical: 10,
-    width: '100%',
-    backgroundColor: '#3A6EA5',
+    backgroundColor: '#eba417',
+    paddingVertical: 15,
+    borderRadius: 7,
     alignItems: 'center',
+    marginTop: 20,
+    width: '100%',
   },
   opacityText: {
-    color: '#F2F2F2',
+    color: '#121214',
+    fontSize: 18,
+    fontWeight: 'bold',
   },
-})
+});
 
 export const componentStyles = StyleSheet.create({
   flatList: {
     marginTop: 10,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   listItem: {
-    backgroundColor: '#F28A30',
+    backgroundColor: '#29292e',
     borderRadius: 10,
     padding: 10,
     marginBottom: 10,
-    width: '100%'
+    width: '100%',
   },
   componentOpacityText: {
-    color: '#2F2F2F',
-    textAlign: 'center'
+    color: '#f1f1f1',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 20,
   },
-})
+});

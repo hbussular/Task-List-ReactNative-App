@@ -57,7 +57,7 @@ const Home: React.FC = () => {
         <Text
           style={homeStyles.text}
         >
-          TASKS APPLICATION!
+          Welcome, Dev!
         </Text>
         <TextInput
           style={homeStyles.textInput}
