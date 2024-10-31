@@ -1,14 +1,30 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+# Task List App
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Welcome to the **Task List App**! This app is designed to help users efficiently manage their to-do items. Users can add tasks, view them in a list, and remove them by simply tapping on each item. Tasks are saved locally using AsyncStorage, making them accessible offline, and there's an option to load tasks from an external API.
 
-## Step 1: Start the Metro Server
+This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli) and written in **TypeScript**.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Features
 
-To start Metro, run the following command from the _root_ of your React Native project:
+* **Local Task Storage**: Uses React Native AsyncStorage to persist tasks.
+* **Easy Task Removal**: Tasks can be deleted with a simple tap.
+* **API Integration (Optional)**: An optional method in the `services` folder fetches tasks from a public API using JavaScript’s Fetch.
+* **User-Friendly Interface**: Intuitive UI designed with TouchableOpacity buttons and styled components.
+
+## Libraries Used
+
+* [React Native Async Storage](https://reactnative.dev/docs/asyncstorage) - For local data persistence.
+* [React-native-splash-screen](https://github.com/crazycodeboy/react-native-splash-screen) - For managing splash screens.
+* [Jest](https://jestjs.io/) - For testing components and functionality.
+
+## Getting Started
+
+>**Note**: Before proceeding, ensure you've completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) guide up to the "Creating a new application" step.
+
+### Step 1: Start the Metro Server
+
+Metro is the JavaScript bundler that ships with React Native. To start it, open a terminal in the project root and run:
 
 ```bash
 # using npm
@@ -18,11 +34,11 @@ npm start
 yarn start
 ```
 
-## Step 2: Start your Application
+### Step 2: Start your Application
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+Keep Metro Bundler running in its own terminal. In a new terminal, use the following command to start the Android or iOS app:
 
-### For Android
+#### For Android
 
 ```bash
 # using npm
@@ -32,7 +48,7 @@ npm run android
 yarn android
 ```
 
-### For iOS
+#### For iOS
 
 ```bash
 # using npm
@@ -42,38 +58,43 @@ npm run ios
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+Alternatively, you can run the app directly from **Android Studio** (for Android) or **Xcode** (for iOS).
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+### Step 3: Modifying your App
 
-## Step 3: Modifying your App
+Once the app is running, you can make changes and see them reflected in real-time:
 
-Now that you have successfully run the app, let's modify it.
+1. Open `App.tsx` in your text editor.
+2. For Android, press <kbd>R</kbd> twice or select **"Reload"** from the **Developer Menu** (accessible with <kbd>Ctrl</kbd> + <kbd>M</kbd> on Windows/Linux or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> on macOS).
+3. For iOS, press <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in the iOS Simulator to reload the app.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+### Usage
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+* **Add Task**: Type a task in the input field and press "Add Task" to save it.
+* **Delete Task**: Tap on a task to remove it from the list.
+* **Fetch Tasks**: Enable fetching from the API (optional) in the `services` folder to populate the list with predefined tasks.
 
-## Congratulations! :tada:
+## Screenshots
 
-You've successfully run and modified your React Native App. :partying_face:
+Below are some screenshots to give you a preview of the Task List App in action. Add your screenshots to `\MyTasksApp\resources\screenshots` and they will display here:
 
-### Now what?
+1. ![Screenshot 1](resources/screenshots/ss-1.png)
+2. ![Screenshot 2](resources/screenshots/ss-2.png)
+3. ![Screenshot 3](resources/screenshots/ss-3.png)
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+## Troubleshooting
 
-# Troubleshooting
+If you encounter any issues, refer to the [React Native Troubleshooting Guide](https://reactnative.dev/docs/troubleshooting).
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## Learn More
 
-# Learn More
+To dive deeper into React Native, explore the following resources:
 
-To learn more about React Native, take a look at the following resources:
+* [React Native Website](https://reactnative.dev) - Comprehensive documentation.
+* [Getting Started](https://reactnative.dev/docs/environment-setup) - Environment setup guide.
+* [Learn the Basics](https://reactnative.dev/docs/getting-started) - React Native essentials.
+* [React Native Blog](https://reactnative.dev/blog) - Latest official blog posts.
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## Contributing
+
+Contributions are welcome! If you'd like to improve the project, please fork the repository, make your changes, and submit a pull request.
