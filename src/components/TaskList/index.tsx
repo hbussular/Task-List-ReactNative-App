@@ -7,30 +7,33 @@ const TaskList: React.FC<ITaskListProps> = ({ taskList }) => {
   const { removeTask } = useTaskContext()
 
   const handleRemoveTask = (id: string) => {
-    Alert.alert('Tem certeza que deseja excluir?', 'O item será deletado permanentemente.', [
+    Alert.alert('Are you sure you want to delete the task?', 'The item will be deleted permanently.', [
       {
-        text: 'Cancelar',
+        text: 'Cancel',
         onPress: () => {}
       },
       {
-        text: 'Excluir Tarefa',
+        text: 'Delete Task',
         onPress: () => removeTask(id)
       }
     ])
   }
 
   return (
-    <FlatList
-      data={taskList}
-      keyExtractor={item => item.id}
-      renderItem={({item}) => (
-        <TouchableOpacity style={componentStyles.listItem} onPress={() => handleRemoveTask(item.id)}>
-          <Text style={componentStyles.componentOpacityText}>{item.title}</Text>
-        </TouchableOpacity>
-      )}
-      contentContainerStyle={{ marginTop: 20,}}
+    <>
+      <Text style={componentStyles.listTitleText}>Task List</Text>
+      <FlatList
+        data={taskList}
+        keyExtractor={item => item.id}
+        renderItem={({item}) => (
+          <TouchableOpacity style={componentStyles.listItem} onPress={() => handleRemoveTask(item.id)}>
+            <Text style={componentStyles.componentOpacityText}>{item.title}</Text>
+          </TouchableOpacity>
+        )}
+        contentContainerStyle={{ marginTop: 20,}}
 
-    />
+      />
+    </>
 
   )
 }

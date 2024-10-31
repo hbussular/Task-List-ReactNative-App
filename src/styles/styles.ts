@@ -53,7 +53,7 @@ export const componentStyles = StyleSheet.create({
     alignItems: 'center',
   },
   listItem: {
-    backgroundColor: '#29292e',
+    backgroundColor: '#4DA8DA',
     borderRadius: 10,
     padding: 10,
     marginBottom: 10,
@@ -65,4 +65,11 @@ export const componentStyles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 20,
   },
+  listTitleText: {
+    color: '#f1f1f1',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 20,
+    marginTop: 30,
+  }
 });
